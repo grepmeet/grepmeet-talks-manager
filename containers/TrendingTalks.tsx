@@ -35,7 +35,7 @@ const TrendingTalks: FC<TrendingTalksProps> = ({talks}) => {
             </SimpleGrid>
 
             <Flex mt="10" justify="center">
-                <NextLink href="#/talks" passHref>
+                <NextLink href="/talks" passHref>
                     <Button as="a" size="lg" colorScheme="secondary">Parcourir tous les talks</Button>
                 </NextLink>
             </Flex>
