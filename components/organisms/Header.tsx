@@ -4,6 +4,7 @@ import NextLink from 'next/link';
 import {
     Box,
     Button,
+    Container,
     Collapse,
     Flex,
     Image,
@@ -21,7 +22,7 @@ interface NavProps {
 }
 
 const Nav: FC<NavProps> = () => (
-    <Stack as="nav" direction={{base: 'column', md: 'row'}} align={{base: 'auto', md: 'center'}} spacing={{base: 4, md: 5}} padding={{base: 5, md: 0}} bg="white">
+    <Stack as="nav" direction={{base: 'column', md: 'row'}} align={{base: 'auto', md: 'center'}} spacing={{base: 4, md: 5}}>
         <NextLink href="#/talks" passHref>
             <Link>
                 Parcourir les talks
@@ -58,43 +59,45 @@ export const Header: FC<HeaderProps> = () => {
 
     return (
         <Box height={{base: 65, md: 122}}>
-            <Flex
-                position="fixed"
-                width="100%"
-                bg="white"
-                color="black"
-                py={{base: 3, md: 10}}
-                px={{base: 3, md: 10}}
-                borderBottom={1}
-                borderStyle="solid"
-                borderColor="gray.100"
-                align="center"
-                justify="space-between">
-                <NextLink href="/" passHref>
-                    <Link as='a'>
-                        <Image src="/grepmeet.png" alt="GrepMeet" width={{base: 100, md: 150}}/>
-                    </Link>
-                </NextLink>
+            <Box width="100%" position="fixed" zIndex={999}>
+                <Flex
+                    bg="white"
+                    color="black"
+                    py={{base: 3, md: 10}}
+                    px={{base: 3, md: 10}}
+                    borderBottom={1}
+                    borderStyle="solid"
+                    borderColor="gray.100"
+                    align="center"
+                    justify="space-between">
+                    <NextLink href="/" passHref>
+                        <Link as='a'>
+                            <Image src="/grepmeet.png" alt="GrepMeet" width={{base: 100, md: 150}}/>
+                        </Link>
+                    </NextLink>
 
-                <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
-                    <Nav />
+                    <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+                        <Nav />
+                    </Flex>
+
+                    <Stack display={{base: 'flex', md: 'none'}} direction="row" spacing={2}>
+                        <IconButton
+                            onClick={onToggle}
+                            icon={
+                                isOpen ? <CloseIcon w={3} h={3}/> : <HamburgerIcon w={5} h={5}/>
+                            }
+                            variant={'ghost'}
+                            aria-label={'Toggle Navigation'}
+                        />
+                    </Stack>
                 </Flex>
 
-                <Stack display={{base: 'flex', md: 'none'}} direction="row" spacing={2}>
-                    <IconButton
-                        onClick={onToggle}
-                        icon={
-                            isOpen ? <CloseIcon w={3} h={3}/> : <HamburgerIcon w={5} h={5}/>
-                        }
-                        variant={'ghost'}
-                        aria-label={'Toggle Navigation'}
-                    />
-                </Stack>
-            </Flex>
-
-            <Collapse in={isOpen}>
-                <Nav/>
-            </Collapse>
+                <Collapse in={isOpen}>
+                    <Container py={5} bg="white">
+                        <Nav/>
+                    </Container>
+                </Collapse>
+            </Box>
         </Box>
     );
 }
