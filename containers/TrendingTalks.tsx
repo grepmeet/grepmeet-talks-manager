@@ -20,7 +20,7 @@ const TrendingTalks: FC<TrendingTalksProps> = ({talks}) => {
                 {talks.map(({id, title, speaker, nbVotes}, index) => (
                     <TalkCard
                         key={`talk-${id}`}
-                        href={`#/talks/${id}/${speakingurl(title)}`}
+                        href={`/talks/${id}/${speakingurl(title)}`}
                         votes={nbVotes}
                         isVoted={index === 1}
                         title={title}
