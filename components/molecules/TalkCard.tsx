@@ -18,18 +18,18 @@ export type TalkCardProps = {
     hashtags?: TagProps[];
 };
 
-export const TalkCard: FC<TalkCardProps> = ({title, href, votes, isVoted = false, onVote, author, hashtags}) => (
-    <Stack spacing={5} justify="space-between" py="6" px="5" boxShadow="lg" rounded="md" bg="white">
+const TalkCard: FC<TalkCardProps> = ({title, href, votes, isVoted = false, onVote, author, hashtags}) => (
+    <Stack as="article" spacing={5} justify="space-between" py="6" px="5" boxShadow="lg" rounded="md" bg="white">
         <Stack spacing={4}>
+            <Heading as="h3" size='md' noOfLines={3} fontFamily='body'>
+                <NextLink href={href} passHref>
+                    <Link _hover={{textDecoration: 'underline'}}>{title}</Link>
+                </NextLink>
+            </Heading>
+
             {hashtags && (
                 <Wrap>{hashtags.slice(0, 3).map(hashtag => <Tag key={hashtag.label} {...hashtag} />)}</Wrap>
             )}
-
-            <NextLink href={href} passHref>
-                <Link>
-                    <Heading as="h3" size='md' noOfLines={3} fontFamily='body'>{title}</Heading>
-                </Link>
-            </NextLink>
 
             {author && <Author {...author}/>}
         </Stack>
@@ -45,3 +45,5 @@ export const TalkCard: FC<TalkCardProps> = ({title, href, votes, isVoted = false
         </Stack>
     </Stack>
 );
+
+export default TalkCard;
