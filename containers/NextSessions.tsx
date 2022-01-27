@@ -21,7 +21,7 @@ const NextSessions: FC<NextSessionsProps> = ({sessions}) => {
                     <SessionCard
                         key={`session-${id}`}
                         title={title}
-                        href={`#/talks/${id}/${speakingurl(title)}`}
+                        href={`/talks/${id}/${speakingurl(title)}`}
                         author={speaker ? {
                             fullName: speaker.fullName,
                             photoURL: speaker.photoURL,

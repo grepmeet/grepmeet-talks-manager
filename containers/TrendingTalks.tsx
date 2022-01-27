@@ -20,7 +20,7 @@ const TrendingTalks: FC<TrendingTalksProps> = ({talks}) => {
                 {talks.map(({id, title, speaker, nbVotes}, index) => (
                     <TalkCard
                         key={`talk-${id}`}
-                        href={`#/talks/${id}/${speakingurl(title)}`}
+                        href={`/talks/${id}/${speakingurl(title)}`}
                         votes={nbVotes}
                         isVoted={index === 1}
                         title={title}
@@ -35,7 +35,7 @@ const TrendingTalks: FC<TrendingTalksProps> = ({talks}) => {
             </SimpleGrid>
 
             <Flex mt="10" justify="center">
-                <NextLink href="#/talks" passHref>
+                <NextLink href="/talks" passHref>
                     <Button as="a" size="lg" colorScheme="secondary">Parcourir tous les talks</Button>
                 </NextLink>
             </Flex>

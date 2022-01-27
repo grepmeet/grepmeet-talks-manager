@@ -23,14 +23,14 @@ interface NavProps {
 
 const Nav: FC<NavProps> = () => (
     <Stack as="nav" direction={{base: 'column', md: 'row'}} align={{base: 'auto', md: 'center'}} spacing={{base: 4, md: 5}}>
-        <NextLink href="#/talks" passHref>
+        <NextLink href="/talks" passHref>
             <Link>
                 Les talks
             </Link>
         </NextLink>
         <NextLink href="#/sessions" passHref>
             <Link>
-                Les prochains meetups
+                Les meetups
             </Link>
         </NextLink>
         <NextLink href="#/talks/proposer-un-talk" passHref>
