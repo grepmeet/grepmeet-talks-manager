@@ -14,7 +14,7 @@ export type TalkCardProps = {
     votes: number;
     isVoted?: boolean;
     onVote?: (e: MouseEvent<HTMLButtonElement>) => void;
-    author?: AuthorProps;
+    author?: AuthorProps|null;
     hashtags?: TagProps[];
 };
 
