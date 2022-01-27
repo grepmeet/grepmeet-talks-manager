@@ -7,23 +7,26 @@ export interface AuthorProps {
     fullName: string;
     subtitle?: string;
     href?: string;
+    size?: 'xl'|'sm';
+    mb?:number;
 }
 
-const Author: FC<AuthorProps> = ({photoURL, fullName, subtitle, href}) => (
-    <Stack direction="row" spacing={4} align="center">
+const Author: FC<AuthorProps> = ({photoURL, fullName, subtitle, href, size = 'sm', mb}) => (
+    <Stack direction="row" spacing={4} align="center" mb={mb}>
         <Avatar
             src={photoURL}
             alt={fullName}
+            size={'xl' === size ? 'xl' : 'md'}
         />
-        <Stack direction="column" spacing={0} fontSize="sm">
+        <Stack direction="column" spacing={0}>
             {href ? (
                 <NextLink href={href} passHref>
-                    <Link><Text fontWeight={600} isTruncated>{fullName}</Text></Link>
+                    <Link><Text as="span" fontSize={size} fontWeight={600} isTruncated>{fullName}</Text></Link>
                 </NextLink>
-            ) : <Text fontWeight={600} isTruncated>{fullName}</Text>}
+            ) : <Text as="span" fontSize={size} fontWeight={600} isTruncated>{fullName}</Text>}
 
             {subtitle && (
-                <Text color={'gray.500'} isTruncated>{subtitle}</Text>
+                <Text as="span" fontSize={'xl' === size ? 'lg' : 'sm'} color={'gray.500'} isTruncated>{subtitle}</Text>
             )}
         </Stack>
     </Stack>
