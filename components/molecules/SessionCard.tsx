@@ -26,7 +26,7 @@ export type SessionCardProps = {
     title: string;
     href: string;
     date: Date;
-    author?: AuthorProps;
+    author?: AuthorProps|null;
     hashtags?: TagProps[];
     isRegistered?: boolean;
 };

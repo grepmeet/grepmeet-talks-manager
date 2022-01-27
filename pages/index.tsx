@@ -2,110 +2,85 @@ import React from 'react';
 import type {NextPage} from 'next';
 import {Box} from '@chakra-ui/react';
 
-import {TalkCardProps} from '../components/molecules/TalkCard';
-import {SessionCardProps} from '../components/molecules/SessionCard';
+import {Session, Talk} from '../types';
+
 import {Hero} from '../components/organisms/Hero';
 
 import TrendingTalks from '../containers/TrendingTalks';
 import NextSessions from '../containers/NextSessions';
 
 // Mocks
-const talks: TalkCardProps[] = [
+const talks: Talk[] = [
     {
+        id: 'AZTDGHYETUYASLKQJQSHFG5672',
         title: "DNA DRIVE : Une nouvelle technologie de stockage ! 450 millions téraoctets par gramme d'ADN.",
-        href: "#/talks/1234/dna-drive-une-nouvelle-technologie",
-        votes: 45678989,
-        author: {
+        nbVotes: 45678989,
+        speaker: {
+            id: '56gh678lkjh',
             fullName: "John Doe",
             subtitle: "Lead Dev @ Microsoft",
             photoURL: "https://avatars0.githubusercontent.com/u/1164541?v=4",
-            href: "#/speakers/3456712/john-doe",
         },
-        hashtags: [
-            {label: '#technology', href: '#/talks?tag=technology'},
-            {label: '#stockage', href: '#/talks?tag=stockage'},
-            {label: '#stockage', href: '#/talks?tag=stockage'},
-            {label: '#stockage', href: '#/talks?tag=stockage'},
-            {label: '#stockage', href: '#/talks?tag=stockage'},
-            {label: '#dna', href: '#/talks?tag=dna'},
-            {label: '#dna', href: '#/talks?tag=dna'},
-            {label: '#dna', href: '#/talks?tag=dna'},
-            {label: '#dna', href: '#/talks?tag=dna'},
-            {label: '#dna', href: '#/talks?tag=dna'},
-        ]
-    },
-    {
-        title: "DNA DRIVE : Une nouvelle technologie !",
-        href: "#/talks/1234/dna-drive-une-nouvelle-technologie",
-        votes: 12345,
-        author: {
-            fullName: "John Doe",
-            subtitle: "Lead Dev @ Microsoft",
-            photoURL: "https://avatars0.githubusercontent.com/u/1164541?v=4",
-            href: "#/speakers/3456712/john-doe",
-        },
-        hashtags: [
-            {label: '#technology', href: '#/talks?tag=technology'},
+        tags: [
+            {id: '1', label: '#technology'},
+            {id: '2', label: '#stockage'},
+            {id: '3', label: '#dna'},
         ],
-        isVoted: true,
     },
     {
+        id: 'AZTDGHYETUYASLKQJQSHFG5672',
         title: "DNA DRIVE : Une nouvelle technologie !",
-        href: "#/talks/1234/dna-drive-une-nouvelle-technologie",
-        votes: 12345,
-        isVoted: true,
-    },
-    {
-        title: "DNA DRIVE : Une nouvelle technologie !",
-        href: "#/talks/1234/dna-drive-une-nouvelle-technologie",
-        votes: 12345,
-        author: {
+        nbVotes: 12345,
+        speaker: {
+            id: '56gh678lkjh',
             fullName: "John Doe",
             subtitle: "Lead Dev @ Microsoft",
             photoURL: "https://avatars0.githubusercontent.com/u/1164541?v=4",
-            href: "#/speakers/3456712/john-doe",
         },
-        isVoted: false,
+        tags: [
+            {id: '1', label: '#technology'},
+        ],
+    },
+    {
+        id: 'AZTDGHYETUYASLKQJQSHFG5672',
+        title: "DNA DRIVE : Une nouvelle technologie !",
+        speaker: {
+            id: '56gh678lkjh',
+            fullName: "John Doe",
+            subtitle: "Lead Dev @ Microsoft",
+            photoURL: "https://avatars0.githubusercontent.com/u/1164541?v=4",
+        },
+        nbVotes: 12345,
     },
 ];
-const sessions: SessionCardProps[] = [
+const sessions: Session[] = [
     {
         title: "DNA DRIVE : Une nouvelle technologie de stockage ! 450 millions téraoctets par gramme d'ADN.",
-        href: "#/talks/1234/dna-drive-une-nouvelle-technologie",
         date: new Date(),
-        author: {
+        speaker: {
+            id: '56gh678lkjh',
             fullName: "John Doe",
-            subtitle: "Lead Dev @ Microsoft",
             photoURL: "https://avatars0.githubusercontent.com/u/1164541?v=4",
-            href: "#/speakers/3456712/john-doe",
+            subtitle: "Lead Dev @ Microsoft",
         },
-        hashtags: [
-            {label: '#technology', href: '#/talks?tag=technology'},
-            {label: '#stockage', href: '#/talks?tag=stockage'},
-            {label: '#stockage', href: '#/talks?tag=stockage'},
-            {label: '#stockage', href: '#/talks?tag=stockage'},
-            {label: '#stockage', href: '#/talks?tag=stockage'},
-            {label: '#dna', href: '#/talks?tag=dna'},
-            {label: '#dna', href: '#/talks?tag=dna'},
-            {label: '#dna', href: '#/talks?tag=dna'},
-            {label: '#dna', href: '#/talks?tag=dna'},
-            {label: '#dna', href: '#/talks?tag=dna'},
-        ]
+        tags: [
+            {id: '1', label: '#technology'},
+            {id: '2', label: '#stockage'},
+            {id: '3', label: '#dna'},
+        ],
     },
     {
         title: "DNA DRIVE : Une nouvelle technologie !",
-        href: "#/talks/1234/dna-drive-une-nouvelle-technologie",
         date: new Date(),
-        author: {
+        speaker: {
+            id: '56gh678lkjh',
             fullName: "John Doe",
             subtitle: "Lead Dev @ Microsoft",
             photoURL: "https://avatars0.githubusercontent.com/u/1164541?v=4",
-            href: "#/speakers/3456712/john-doe",
         },
-        hashtags: [
-            {label: '#technology', href: '#/talks?tag=technology'},
+        tags: [
+            {id: '1', label: '#technology'},
         ],
-        isRegistered: true,
     },
 ];
 

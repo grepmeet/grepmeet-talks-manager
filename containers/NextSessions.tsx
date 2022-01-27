@@ -1,11 +1,14 @@
 import React, {FC} from 'react';
+import speakingurl from 'speakingurl';
 import NextLink from 'next/link';
 import {Button, Container, Flex, Heading, SimpleGrid, Text} from '@chakra-ui/react';
 
-import SessionCard, {SessionCardProps} from '../components/molecules/SessionCard';
+import {Session} from '../types';
+
+import SessionCard from '../components/molecules/SessionCard';
 
 export type NextSessionsProps = {
-    sessions: SessionCardProps[];
+    sessions: Session[];
 };
 
 const NextSessions: FC<NextSessionsProps> = ({sessions}) => {
@@ -14,10 +17,19 @@ const NextSessions: FC<NextSessionsProps> = ({sessions}) => {
             <Heading mb='10'>Prochains <Text as="span" color="secondary.500">meetups.</Text></Heading>
 
             <SimpleGrid bg='gray.50' columns={{base: 1, md: 2}} spacing='8'>
-                {sessions.map((session, index) => (
+                {sessions.map(({id, title, speaker, date}, index) => (
                     <SessionCard
-                        key={`session-${index}`}
-                        {...session}
+                        key={`session-${id}`}
+                        title={title}
+                        href={`#/talks/${id}/${speakingurl(title)}`}
+                        author={speaker ? {
+                            fullName: speaker.fullName,
+                            photoURL: speaker.photoURL,
+                            subtitle: speaker.subtitle,
+                            href: `#/speakers/${speaker.id}/${speakingurl(speaker.fullName)}`
+                        } : null}
+                        date={date}
+                        isRegistered={index === 1}
                     />
                 ))}
             </SimpleGrid>
