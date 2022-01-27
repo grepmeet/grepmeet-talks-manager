@@ -6,12 +6,12 @@ export interface HeroProps {
 }
 
 export const Hero: FC<HeroProps> = () => (
-    <Container maxW={680} py={{base: 10, md: 20}} textAlign="center">
+    <Container as="section" maxW={680} py={{base: 10, md: 20}} textAlign="center">
         <Flex alignItems="center" flexDirection="column">
             <Heading
+                as="h1"
                 position="relative"
                 zIndex={100}
-                fontWeight="normal"
                 fontSize={{base: '3xl', sm: '4xl', md: '5xl'}}
                 lineHeight={'110%'}>
                 Des talks proposés par les techs <Text as={'span'} color="secondary.500">pour les techs.</Text>
