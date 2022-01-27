@@ -36,7 +36,7 @@ export const Hero: FC<HeroProps> = () => (
 
         <Stack direction={{base: 'column', sm: 'row'}} mt={10} justifyContent="center" spacing={5}>
             <NextLink href="#/talks/proposer-un-talk" passHref>
-                <Button size="lg" colorScheme="primary">Proposer un talk</Button>
+                <Button size="lg" colorScheme="secondary">Proposer un talk</Button>
             </NextLink>
             <NextLink href="#/about">
                 <Button size="lg" colorScheme="gray" fontWeight="200">En savoir plus</Button>
