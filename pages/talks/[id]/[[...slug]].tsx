@@ -1,24 +1,24 @@
 import React from 'react';
 import type {NextPage} from 'next';
 import speakingurl from 'speakingurl';
-import NextLink from 'next/link';
-import {useRouter} from 'next/router';
 import {
     Wrap,
     Container,
     Heading,
     Stack,
     Text,
-    ButtonGroup,
     Button,
-    SimpleGrid,
     Box,
     Grid,
     Progress,
     Avatar,
-    AvatarGroup, MenuButton, MenuList, MenuItem, Menu, Flex
+    AvatarGroup,
+    MenuButton,
+    MenuList,
+    MenuItem,
+    Menu
 } from '@chakra-ui/react';
-import {LinkIcon, RepeatClockIcon, TriangleUpIcon} from '@chakra-ui/icons';
+import {TriangleUpIcon} from '@chakra-ui/icons';
 
 import {Talk} from '../../../types';
 
