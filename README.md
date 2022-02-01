@@ -3,38 +3,29 @@
         <img src="https://grepmeet-talks-manager.netlify.app/og-cover.png" />
     </a>
 </p>
-<h1 align="center">Grepmeet</h1>
-<p align="center">
-  <strong>Des talks proposés par les techs pour les techs.</strong>
-</p>
+<h1 align="center">Des talks proposés par les techs pour les techs. 🎙️</h1>
 
+[Grepmeet.org](https://grepmeet.org) est une **plateforme communautaire** permettant de proposer **un talk par semaine**, sélectionné avec soin **par la communauté**.
 
-<p align="center">
-  <a href="https://grepmeet.org">Grepmeet.org</a> est une <strong>plateforme communautaire</strong> permettant de proposer un <strong>talk par semaine</strong>, sélectionné avec soin <strong>par la communauté et toi</strong>.
-</p>
-<p align="center">
- Un grepmeet dure <strong>environ 17mn</strong> et est suivi d'<strong>un temps d'échange avec le speaker</strong> et les autres membres de la communauté.
-</p>
-<p align="center">
- Que tu sois débutant ou expert, tu peux proposer un grepmeet !
-</p>
+Un grepmeet dure **environ 17mn** et est suivi d'**un temps d'échange avec le speaker** et les autres membres de la communauté.
 
-## Getting Started
+**Que tu sois débutant ou expert, tu peux proposer un grepmeet !**
 
-First, run the development server:
+## Contributing 💖
 
-```bash
-$ yarn install
-$ yarn dev
-```
+Tu veux contribuer ? C'est génial ! Nous avons un [guide de contribution](./CONTRIBUTING.md) pour t'aider.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Contributors ✨
 
+Les remerciements vont a ces merveilleuses personnes
 
-## Learn More
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/anasdox"><img src="https://avatars2.githubusercontent.com/u/954103?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Anas Ameziane</b></sub></a><br /><a href="https://github.com/grepmeet/grepmeet-talks-manager?author=anasdox" title="Code">💻</a> <a href="#ideas-anasdox" title="Ideas">💡</a></td>
+    <td align="center"><a href="https://github.com/qmachard"><img src="https://avatars.githubusercontent.com/u/11388211?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Quentin Machard</b></sub></a><br /><a href="https://github.com/grepmeet/grepmeet-talks-manager?author=qmachard" title="Code">💻</a> <a href="#ideas-qmachard" title="Ideas">💡</a> <a href="#design-qmachard" title="Design">🎨</a></td>
+  </tr>
+</table>
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
+MIT © [Grepmeet.org](https://github.com/grepmeet)
