@@ -21,8 +21,8 @@ Les remerciements vont a ces merveilleuses personnes
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/anasdox"><img src="https://avatars2.githubusercontent.com/u/954103?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Anas Ameziane</b></sub></a><br /><a href="https://github.com/grepmeet/grepmeet-talks-manager?author=anasdox" title="Code">💻</a> <a href="#ideas-anasdox" title="Ideas">💡</a></td>
-    <td align="center"><a href="https://github.com/qmachard"><img src="https://avatars.githubusercontent.com/u/11388211?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Quentin Machard</b></sub></a><br /><a href="https://github.com/grepmeet/grepmeet-talks-manager?author=qmachard" title="Code">💻</a> <a href="#ideas-qmachard" title="Ideas">💡</a> <a href="#design-qmachard" title="Design">🎨</a></td>
+    <td align="center"><a href="https://github.com/anasdox"><img src="https://avatars2.githubusercontent.com/u/954103?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Anas Ameziane</b></sub></a><br /><a href="https://github.com/grepmeet/grepmeet-talks-manager/commits?author=anasdox" title="Code">💻</a> <a href="#ideas-anasdox" title="Ideas">💡</a></td>
+    <td align="center"><a href="https://github.com/qmachard"><img src="https://avatars.githubusercontent.com/u/11388211?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Quentin Machard</b></sub></a><br /><a href="https://github.com/grepmeet/grepmeet-talks-manager/commits?author=qmachard" title="Code">💻</a> <a href="#ideas-qmachard" title="Ideas">💡</a> <a href="#design-qmachard" title="Design">🎨</a></td>
   </tr>
 </table>
 
