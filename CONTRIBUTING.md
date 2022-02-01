@@ -39,5 +39,5 @@ cross-component development and builds all components.
 
 ## License
 
-By contributing your code to the chakra-ui GitHub repository, you agree to
-license your contribution under the MIT license.
+By contributing your code to the grepmeet GitHub repository, you agree to
+license your contribution under the [MIT license](./LICENSE).
