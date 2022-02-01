@@ -22,21 +22,25 @@ export const Hero: FC<HeroProps> = () => (
 
         <Stack mt={5} spacing={5} textAlign="center" alignItems="center">
             <Text fontWeight="200">
-                Grepmeet est une <Text as="strong" fontWeight="bold" color="secondary.500">plateforme communautaire</Text>{' '}
-                permettant de proposer <Text as="strong" fontWeight="bold" color="secondary.500">un meetup par semaine</Text>,{' '}
-                où les talks sont <Text as="strong" fontWeight="bold" color="secondary.500">sélectionnées avec soin</Text> par toi et la communauté.
+                Grepmeet.org est une <Text as="strong" fontWeight="bold" color="secondary.500">plateforme communautaire</Text>{' '}
+                permettant de proposer <Text as="strong" fontWeight="bold" color="secondary.500">un talk par semaine</Text>,{' '}
+                sélectionné avec soin <Text as="strong" fontWeight="bold" color="secondary.500">par la communauté et toi</Text>.
             </Text>
 
             <Text fontWeight="200">
-                Les talks Grepmeet durent <Text as="strong" fontWeight="bold" color="secondary.500">environ 17mn</Text>.{' '}
-                Ils sont ouverts et accessibles à tous les techs. Que tu sois <Text as="strong" fontWeight="bold" color="secondary.500">débutant ou expert</Text>,{' '}
-                tu peux proposer un talk !
+                Un grepmeet dure <Text as="strong" fontWeight="bold" color="secondary.500">environ 17mn</Text>{' '}
+                et est suivi d&apos;un <Text as="strong" fontWeight="bold" color="secondary.500">temps d&apos;échange avec le speaker</Text> et la communauté.{' '}
+            </Text>
+
+            <Text fontWeight="200">
+                <Text as="strong" fontWeight="bold" color="secondary.500">Que tu sois débutant ou expert</Text>,{' '}
+                tu peux proposer un grepmeet !
             </Text>
         </Stack>
 
         <Stack direction={{base: 'column', sm: 'row'}} mt={10} justifyContent="center" spacing={5}>
-            <NextLink href="#/talks/proposer-un-talk" passHref>
-                <Button size="lg" colorScheme="secondary">Proposer un talk</Button>
+            <NextLink href="#/talks/proposer-un-grepmeet" passHref>
+                <Button size="lg" colorScheme="secondary">Proposer un grepmeet</Button>
             </NextLink>
             <NextLink href="#/about">
                 <Button size="lg" colorScheme="gray" fontWeight="200">En savoir plus</Button>

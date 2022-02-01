@@ -128,11 +128,11 @@ const TalkDetails: NextPage = () => {
                                 <Avatar src="https://i.pravatar.cc/300?u=12" alt="John Doe"/>
                             </AvatarGroup>
                             <Text fontWeight="bold" align="center">{talk.nbVotes} / 20 votes</Text>
-                            <Button colorScheme="primary" leftIcon={<TriangleUpIcon/>} isFullWidth><span>Voter pour ce talk</span></Button>
+                            <Button colorScheme="primary" leftIcon={<TriangleUpIcon/>} isFullWidth><span>Voter pour ce grepmeet</span></Button>
 
                             <Menu>
                                 <MenuButton as={Button} colorScheme="gray" isFullWidth>
-                                    Partager ce talk
+                                    Partager ce grepmeet
                                 </MenuButton>
                                 <MenuList>
                                     <MenuItem>Partager sur Twitter</MenuItem>

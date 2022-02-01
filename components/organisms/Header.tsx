@@ -25,17 +25,12 @@ const Nav: FC<NavProps> = () => (
     <Stack as="nav" direction={{base: 'column', md: 'row'}} align={{base: 'auto', md: 'center'}} spacing={{base: 4, md: 5}}>
         <NextLink href="/talks" passHref>
             <Link>
-                Les talks
+                Parcourir les grepmeets
             </Link>
         </NextLink>
-        <NextLink href="#/sessions" passHref>
-            <Link>
-                Les meetups
-            </Link>
-        </NextLink>
-        <NextLink href="#/talks/proposer-un-talk" passHref>
+        <NextLink href="#/talks/proposer-un-grepmeet" passHref>
             <Link fontWeight={400}>
-                Proposer un talk
+                Proposer un grepmeet
             </Link>
         </NextLink>
         <NextLink href="#/login" passHref>

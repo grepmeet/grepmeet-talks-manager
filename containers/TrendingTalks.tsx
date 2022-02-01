@@ -14,7 +14,7 @@ export type TrendingTalksProps = {
 const TrendingTalks: FC<TrendingTalksProps> = ({talks}) => {
     return (
         <Container as="section" py={{base: 10, md: 20}} maxW="5xl">
-            <Heading mb='10'>Talks en <Text as="span" color="secondary.500">tendance.</Text></Heading>
+            <Heading mb='10'>Grepmeets en <Text as="span" color="secondary.500">tendance.</Text></Heading>
 
             <SimpleGrid columns={{base: 1, md: 2}} spacing='8'>
                 {talks.map(({id, title, speaker, nbVotes}, index) => (
@@ -36,7 +36,7 @@ const TrendingTalks: FC<TrendingTalksProps> = ({talks}) => {
 
             <Flex mt="10" justify="center">
                 <NextLink href="/talks" passHref>
-                    <Button as="a" size="lg" colorScheme="secondary">Parcourir tous les talks</Button>
+                    <Button as="a" size="lg" colorScheme="secondary">Parcourir tous les grepmeets</Button>
                 </NextLink>
             </Flex>
         </Container>
