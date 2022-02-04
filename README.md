@@ -1,21 +1,39 @@
 <p align="center">
     <a href="https://grepmeet-talks-manager.netlify.app/" target="_blank">
-        <img src="https://grepmeet-talks-manager.netlify.app/og-cover.png" />
+        <img src="https://grepmeet-talks-manager.netlify.app/grepmeet.png" />
     </a>
 </p>
-<h1 align="center">Des talks proposés par les techs pour les techs. 🎙️</h1>
 
-[Grepmeet.org](https://grepmeet.org) est une **plateforme communautaire** permettant de proposer **un talk par semaine**, sélectionné avec soin **par la communauté**.
+# Que fait ce projet ?
 
-Un grepmeet dure **environ 17mn** et est suivi d'**un temps d'échange avec le speaker** et les autres membres de la communauté.
+[grepmeet.org](https://grepmeet.org) est une **plateforme communautaire** permettant de proposer **un talk par semaine**, sélectionné avec soin **par la communauté**.
 
-**Que tu sois débutant ou expert, tu peux proposer un grepmeet !**
+## ⏱️ Un format court
 
-## Contributing 💖
+Un grepmeet est un talk 🎙️ qui dure **environ 17mn** et est suivi d'**un temps d'échange avec le speaker** et les autres membres de la communauté.
+
+## 🤚 Un contenu séléctionés
+
+Les grepmeets sont sélectionnées avec soin, par la communauté pour la communauté.
+
+> [Clique ici](https://stately.ai/viz/4d54d67d-4f7d-4953-ad39-e74ef096a1b1) pour mieux comprendre le processus de séléction d'un grepmeet.
+
+## 👥 Une communauté
+
+Un moment récurrent de rencontre et d'entraide pour faire vivre les communautés. **Que tu sois débutant ou expert, tout le monde peux proposer un grepmeet !**
+
+# 🤔 Pourquoi ce projet est-il utile ?
+
+La plupart des "meetups" sont irréguliers !
+C'est un organisateur bénévole qui tient en otage, malgré lui, toute une communauté. Il suffit que sa charge de travail augmente 🤯 ou que sa situation familiale change 👶🍼 pour que les événements disparaissent pendant des mois.
+
+L'objectif de grepmeet.org est de proposer une solution simple et automatisée pour faire perdurer les événements en déchargeant les organisateurs de cette tâche. Ces derniers, s'ils le souhaitent, deviennent speakers, modérateurs ou animateurs.
+
+# 💖 Contribuer
 
 Tu veux contribuer ? C'est génial ! Nous avons un [guide de contribution](./CONTRIBUTING.md) pour t'aider.
 
-## Contributors ✨
+## 👥 Contributeurs
 
 Les remerciements vont a ces merveilleuses personnes
 
@@ -26,6 +44,6 @@ Les remerciements vont a ces merveilleuses personnes
   </tr>
 </table>
 
-## License
+# ⚖️ License
 
-MIT © [Grepmeet.org](https://github.com/grepmeet)
+MIT © [grepmeet.org](https://github.com/grepmeet)
