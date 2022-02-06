@@ -17,7 +17,7 @@ A grepmeet is a talk 🎙️ that lasts about 17mn, followed by a time of exchan
 
 grepmeets are carefully selected, by the community for the community.
 
-> To understand the process of selecting a grepmeet [click here] (https://stately.ai/viz/4d54d67d-4f7d-4953-ad39-e74ef096a1b1) .
+> To understand the process of selecting a grepmeet [click here](https://stately.ai/viz/4d54d67d-4f7d-4953-ad39-e74ef096a1b1) .
 
 ### 👥 A community
 
