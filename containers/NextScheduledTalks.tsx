@@ -1,6 +1,6 @@
 import React, { FC } from "react";
-import NextLink from "next/link";
 import speakingurl from "speakingurl";
+import NextLink from "next/link";
 import {
   Button,
   Container,
@@ -12,30 +12,30 @@ import {
 
 import { Talk } from "../types";
 
-import TalkCard from "../components/molecules/TalkCard";
+import ScheduledTalkCard from "../components/molecules/ScheduledTalkCard";
 
-export type TrendingTalksProps = {
-  talks: Talk[];
+export type NextScheduledTalksProps = {
+  scheduledTalks: Talk[];
 };
 
-const TrendingTalks: FC<TrendingTalksProps> = ({ talks }) => {
+const NextScheduledTalks: FC<NextScheduledTalksProps> = ({
+  scheduledTalks,
+}) => {
   return (
     <Container as="section" py={{ base: 10, md: 20 }} maxW="5xl">
       <Heading mb="10">
-        Grepmeets en{" "}
+        Prochains{" "}
         <Text as="span" color="secondary.500">
-          tendance.
+          grepmeets.
         </Text>
       </Heading>
 
-      <SimpleGrid columns={{ base: 1, md: 2 }} spacing="8">
-        {talks.map(({ id, title, speaker, nbVotes }, index) => (
-          <TalkCard
+      <SimpleGrid bg="gray.50" columns={{ base: 1, md: 2 }} spacing="8">
+        {scheduledTalks.map(({ id, title, speaker, date }, index) => (
+          <ScheduledTalkCard
             key={`talk-${id}`}
-            href={`/talks/${id}/${speakingurl(title)}`}
-            votes={nbVotes}
-            isVoted={index === 1}
             title={title}
+            href={`/talks/${id}/${speakingurl(title)}`}
             author={
               speaker
                 ? {
@@ -48,14 +48,16 @@ const TrendingTalks: FC<TrendingTalksProps> = ({ talks }) => {
                   }
                 : null
             }
+            date={date}
+            isRegistered={index === 1}
           />
         ))}
       </SimpleGrid>
 
       <Flex mt="10" justify="center">
-        <NextLink href="/talks" passHref>
+        <NextLink href="#/scheduledTalks" passHref>
           <Button as="a" size="lg" colorScheme="secondary">
-            Parcourir tous les grepmeets
+            Voir les prochains grepmeets
           </Button>
         </NextLink>
       </Flex>
@@ -63,4 +65,4 @@ const TrendingTalks: FC<TrendingTalksProps> = ({ talks }) => {
   );
 };
 
-export default TrendingTalks;
+export default NextScheduledTalks;

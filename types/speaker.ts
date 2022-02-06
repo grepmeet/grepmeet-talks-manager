@@ -1,7 +1,8 @@
-import User from './user';
+import User from "./user";
 
 type Speaker = User & {
-    subtitle?: string;
+  subtitle?: string;
+  biography?: string;
 };
 
 export default Speaker;
