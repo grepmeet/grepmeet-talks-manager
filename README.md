@@ -1,41 +1,41 @@
 <p align="center">
+<br/>
     <a href="https://grepmeet-talks-manager.netlify.app/" target="_blank">
         <img src="https://grepmeet-talks-manager.netlify.app/grepmeet.png" />
     </a>
 </p>
 
-## Que fait ce projet ?
+## What does this project do?
 
-[grepmeet.org](https://grepmeet.org) est une **plateforme communautaire** permettant de proposer **un talk par semaine**, sélectionné avec soin **par la communauté**.
+[grepmeet.org](https://grepmeet.org) is platform help communities to organize talks selected by there members.
 
-### ⏱️ Un format court
+### ⏱️ A short format
 
-Un grepmeet est un talk 🎙️ qui dure **environ 17mn** et est suivi d'**un temps d'échange avec le speaker** et les autres membres de la communauté.
+A grepmeet is a talk 🎙️ that lasts about 17mn, followed by a time of exchange with the speaker and the other members of the community.
 
-### 🤚 Un contenu séléctionés
+### 🤚 A selected content
 
-Les grepmeets sont sélectionnées avec soin, par la communauté pour la communauté.
+grepmeets are carefully selected, by the community for the community.
 
-> [Clique ici](https://stately.ai/viz/4d54d67d-4f7d-4953-ad39-e74ef096a1b1) pour mieux comprendre le processus de séléction d'un grepmeet.
+> To understand the process of selecting a grepmeet [click here] (https://stately.ai/viz/4d54d67d-4f7d-4953-ad39-e74ef096a1b1) .
 
-### 👥 Une communauté
+### 👥 A community
 
-Un moment récurrent de rencontre et d'entraide pour faire vivre les communautés. **Que tu sois débutant ou expert, tout le monde peux proposer un grepmeet !**
+A recurring time to meet and help each other to keep communities alive. Whether you're a beginner or an expert, anyone can propose a grepmeet!
 
-## 🤔 Pourquoi ce projet est-il utile ?
+## 🤔 Why is this project useful?
 
-La plupart des "meetups" sont irréguliers !
-C'est un organisateur bénévole qui tient en otage, malgré lui, toute une communauté. Il suffit que sa charge de travail augmente 🤯 ou que sa situation familiale change 👶🍼 pour que les événements disparaissent pendant des mois.
+Most "meetups" are irregular! It is a volunteer organizer who holds a whole community hostage, in spite of himself. All it takes is for his workload to increase 🤯 or his family situation to change 👶🍼 for events to disappear for months at a time.
 
-L'objectif de grepmeet.org est de proposer une solution simple et automatisée pour faire perdurer les événements en déchargeant les organisateurs de cette tâche. Ces derniers, s'ils le souhaitent, deviennent speakers, modérateurs ou animateurs.
+The goal of grepmeet.org is to offer a simple and automated solution to keep events going by relieving organizers of this task. The latter, if they wish, become speakers, moderators or animators.
 
-## 💖 Contribuer
+## 💖 Contribute
 
-Tu veux contribuer ? C'est génial ! Nous avons un [guide de contribution](./CONTRIBUTING.md) pour t'aider.
+Want to contribute? That's awesome! We have a contribution [guide to help you](./CONTRIBUTING.md)
 
-### 👥 Contributeurs
+### 👥 Contributors
 
-Les remerciements vont a ces merveilleuses personnes
+Thanks go to these wonderful people :
 
 <table>
   <tr>
