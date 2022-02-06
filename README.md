@@ -7,7 +7,7 @@
 
 ## What does this project do?
 
-[grepmeet.org](https://grepmeet.org) is platform help communities to organize talks selected by there members.
+[grepmeet.org](https://grepmeet.org) help communities to auto-organize talks selected by there members.
 
 ### ⏱️ A short format
 
