@@ -20,7 +20,7 @@ import {
 } from '@chakra-ui/react';
 import { TriangleUpIcon } from '@chakra-ui/icons';
 
-import { Talk } from '../../../types';
+import { Talk } from 'shared';
 
 import Author from '../../../components/atoms/Author';
 import Tag from '../../../components/atoms/Tag';
