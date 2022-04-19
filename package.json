@@ -1,5 +1,6 @@
 {
   "name": "grepmeet-talks-manager",
+  "packageManager": "yarn@3.2.0",
   "private": true,
   "version": "1.0.0",
   "description": "grepmeet.org help communities to auto-organize talks selected by there members.",
@@ -9,8 +10,10 @@
     "Anas Ameziane <anas.ameziane@gmail.com>"
   ],
   "scripts": {
-    "packages:build": "yarn workspaces foreach -ptv run build",
-    "packages:lint": "yarn workspaces foreach -ptv run lint",
+    "dev": "yarn workspace front run dev",
+    "start": "yarn workspace front run start",
+    "build": "yarn workspaces foreach -ptv run build",
+    "lint": "yarn workspaces foreach -vp run lint",
     "commit": "git-cz"
   },
   "workspaces": [
