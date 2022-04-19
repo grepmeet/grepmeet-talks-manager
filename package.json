@@ -24,5 +24,8 @@
       "path": "./node_modules/git-cz"
     }
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@netlify/plugin-nextjs": "^4.4.0"
+  }
 }
