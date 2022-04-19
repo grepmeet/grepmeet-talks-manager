@@ -6,7 +6,7 @@ import {useRouter} from 'next/router';
 import {Wrap, Container, Heading, Text, ButtonGroup, Button, SimpleGrid} from '@chakra-ui/react';
 import {RepeatClockIcon, TriangleUpIcon} from '@chakra-ui/icons';
 
-import {Talk} from '../../types';
+import {Talk} from 'shared';
 
 import TalkCard from '../../components/molecules/TalkCard';
 
@@ -27,11 +27,13 @@ const talks: Talk[] = [
             {id: '2', label: '#stockage'},
             {id: '3', label: '#dna'},
         ],
+        language: 'fr',
+        date: null,
     },
     {
         id: 'AZTDGHYETUYASLKQJQSHFG5672',
         title: "DNA DRIVE : Une nouvelle technologie !",
-        nbVotes: 12345,
+        nbVotes: 358,
         speaker: {
             id: '56gh678lkjh',
             fullName: "John Doe",
@@ -41,83 +43,24 @@ const talks: Talk[] = [
         tags: [
             {id: '1', label: '#technology'},
         ],
+        language: 'fr',
+        date: null,
     },
     {
         id: 'AZTDGHYETUYASLKQJQSHFG5672',
         title: "DNA DRIVE : Une nouvelle technologie !",
+        nbVotes: 0,
         speaker: {
             id: '56gh678lkjh',
             fullName: "John Doe",
             subtitle: "Lead Dev @ Microsoft",
             photoURL: "https://avatars0.githubusercontent.com/u/1164541?v=4",
         },
-        nbVotes: 12345,
-    },
-    {
-        id: 'AZTDGHYETUYASLKQJQSHFG5672',
-        title: "DNA DRIVE : Une nouvelle technologie !",
-        speaker: {
-            id: '56gh678lkjh',
-            fullName: "John Doe",
-            subtitle: "Lead Dev @ Microsoft",
-            photoURL: "https://avatars0.githubusercontent.com/u/1164541?v=4",
-        },
-        nbVotes: 12345,
-    },
-    {
-        id: 'AZTDGHYETUYASLKQJQSHFG5672',
-        title: "DNA DRIVE : Une nouvelle technologie !",
-        speaker: {
-            id: '56gh678lkjh',
-            fullName: "John Doe",
-            subtitle: "Lead Dev @ Microsoft",
-            photoURL: "https://avatars0.githubusercontent.com/u/1164541?v=4",
-        },
-        nbVotes: 12345,
-    },
-    {
-        id: 'AZTDGHYETUYASLKQJQSHFG5672',
-        title: "DNA DRIVE : Une nouvelle technologie !",
-        speaker: {
-            id: '56gh678lkjh',
-            fullName: "John Doe",
-            subtitle: "Lead Dev @ Microsoft",
-            photoURL: "https://avatars0.githubusercontent.com/u/1164541?v=4",
-        },
-        nbVotes: 12345,
-    },
-    {
-        id: 'AZTDGHYETUYASLKQJQSHFG5672',
-        title: "DNA DRIVE : Une nouvelle technologie !",
-        speaker: {
-            id: '56gh678lkjh',
-            fullName: "John Doe",
-            subtitle: "Lead Dev @ Microsoft",
-            photoURL: "https://avatars0.githubusercontent.com/u/1164541?v=4",
-        },
-        nbVotes: 12345,
-    },
-    {
-        id: 'AZTDGHYETUYASLKQJQSHFG5672',
-        title: "DNA DRIVE : Une nouvelle technologie !",
-        speaker: {
-            id: '56gh678lkjh',
-            fullName: "John Doe",
-            subtitle: "Lead Dev @ Microsoft",
-            photoURL: "https://avatars0.githubusercontent.com/u/1164541?v=4",
-        },
-        nbVotes: 12345,
-    },
-    {
-        id: 'AZTDGHYETUYASLKQJQSHFG5672',
-        title: "DNA DRIVE : Une nouvelle technologie !",
-        speaker: {
-            id: '56gh678lkjh',
-            fullName: "John Doe",
-            subtitle: "Lead Dev @ Microsoft",
-            photoURL: "https://avatars0.githubusercontent.com/u/1164541?v=4",
-        },
-        nbVotes: 12345,
+        tags: [
+            {id: '1', label: '#technology'},
+        ],
+        language: 'fr',
+        date: null,
     },
 ];
 

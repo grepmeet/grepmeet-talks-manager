@@ -2,7 +2,7 @@ import React from "react";
 import type { NextPage } from "next";
 import { Box } from "@chakra-ui/react";
 
-import { Session, Talk } from "../types";
+import { Talk } from "shared";
 
 import { Hero } from "../components/organisms/Hero";
 

@@ -10,7 +10,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 
-import { Talk } from "../types";
+import type { Talk } from "shared";
 
 import ScheduledTalkCard from "../components/molecules/ScheduledTalkCard";
 

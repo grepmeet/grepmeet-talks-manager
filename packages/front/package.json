@@ -1,13 +1,14 @@
 {
-  "name": "web",
+  "name": "front",
   "version": "1.0.0",
+  "packageManager": "yarn@3.0.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "commit": "git-cz"
+    "clean": "rm -r .next/*"
   },
   "dependencies": {
     "@chakra-ui/icons": "^1.1.1",
@@ -27,7 +28,7 @@
     "@types/speakingurl": "^13.0.3",
     "eslint": "8.7.0",
     "eslint-config-next": "12.0.8",
-    "git-cz": "4.8.0",
+    "shared": "workspace:*",
     "typescript": "4.5.5"
   },
   "config": {
