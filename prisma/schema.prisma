@@ -7,22 +7,50 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  fullName  String
+  photoUrl  String?
+  speaker   Speaker?
+  votes     Vote[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
 model Speaker {
   id        String   @id @default(uuid())
   fullName  String
   bio       String
-  photoUrl  String
+  photoUrl  String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   talks     Talk[]
+  userId    String   @unique
+  user      User     @relation(fields: [userId], references: [id])
 }
 
 model Talk {
-  id        String   @id @default(uuid())
+  id        String    @id @default(uuid())
   title     String
   abstract  String
+  votes     Vote[]
+  language  String
+  date      DateTime?
+  tags      String[]
   speakerId String
-  speaker   Speaker  @relation(fields: [speakerId], references: [id])
+  speaker   Speaker   @relation(fields: [speakerId], references: [id])
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Vote {
+  id        String   @id @default(uuid())
+  talkId    String
+  talk      Talk     @relation(fields: [talkId], references: [id])
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
