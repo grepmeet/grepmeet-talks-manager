@@ -28,6 +28,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
     "git-cz": "4.8.0",
+    "prisma": "^5.10.2",
     "typescript": "^5"
   },
   "config": {
