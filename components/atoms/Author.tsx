@@ -15,14 +15,14 @@ const Author: FC<AuthorProps> = ({photoURL, fullName, subtitle, href, size = 'sm
     <Stack direction="row" spacing={4} align="center" mb={mb}>
         <Avatar
             src={photoURL}
-            alt={fullName}
+            name={fullName}
             size={'xl' === size ? 'xl' : 'md'}
         />
         <Stack direction="column" spacing={0}>
             {href ? (
-                <NextLink href={href} passHref>
-                    <Link><Text as="span" fontSize={size} fontWeight={600} isTruncated>{fullName}</Text></Link>
-                </NextLink>
+              <Link as={NextLink} href={href}>
+                <Text as="span" fontSize={size} fontWeight={600} isTruncated>{fullName}</Text>
+              </Link>
             ) : <Text as="span" fontSize={size} fontWeight={600} isTruncated>{fullName}</Text>}
 
             {subtitle && (

@@ -22,9 +22,7 @@ const TalkCard: FC<TalkCardProps> = ({title, href, votes, isVoted = false, onVot
     <Stack as="article" spacing={5} justify="space-between" py="6" px="5" boxShadow="lg" rounded="md" bg="white">
         <Stack spacing={4}>
             <Heading as="h3" size='md' noOfLines={3} fontFamily='body'>
-                <NextLink href={href} passHref>
-                    <Link _hover={{textDecoration: 'underline'}}>{title}</Link>
-                </NextLink>
+                <Link as={NextLink} href={href} _hover={{textDecoration: 'underline'}}>{title}</Link>
             </Heading>
 
             {hashtags && (
@@ -35,9 +33,7 @@ const TalkCard: FC<TalkCardProps> = ({title, href, votes, isVoted = false, onVot
         </Stack>
 
         <Stack alignSelf="flex-end" direction="row" spacing={2} alignItems="center">
-            <NextLink href={href} passHref>
-                <Button as="a" colorScheme="primary">En savoir plus</Button>
-            </NextLink>
+            <Button as={NextLink} href={href} colorScheme="primary">En savoir plus</Button>
             <Button onClick={onVote} leftIcon={<TriangleUpIcon/>} colorScheme={isVoted ? 'secondary' : 'gray'}
                     size="sm">
                 {nFormatter(votes, 2)}

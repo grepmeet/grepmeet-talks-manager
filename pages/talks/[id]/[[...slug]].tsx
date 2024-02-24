@@ -157,18 +157,18 @@ const TalkDetails: NextPage = () => {
                 value={(talk.nbVotes / 20) * 100}
               />
               <AvatarGroup size="md" max={5} spacing={-2}>
-                <Avatar src="https://i.pravatar.cc/300?u=1" alt="John Doe" />
-                <Avatar src="https://i.pravatar.cc/300?u=2" alt="John Doe" />
-                <Avatar src="https://i.pravatar.cc/300?u=3" alt="John Doe" />
-                <Avatar src="https://i.pravatar.cc/300?u=4" alt="John Doe" />
-                <Avatar src="https://i.pravatar.cc/300?u=5" alt="John Doe" />
-                <Avatar src="https://i.pravatar.cc/300?u=6" alt="John Doe" />
-                <Avatar src="https://i.pravatar.cc/300?u=7" alt="John Doe" />
-                <Avatar src="https://i.pravatar.cc/300?u=8" alt="John Doe" />
-                <Avatar src="https://i.pravatar.cc/300?u=9" alt="John Doe" />
-                <Avatar src="https://i.pravatar.cc/300?u=10" alt="John Doe" />
-                <Avatar src="https://i.pravatar.cc/300?u=11" alt="John Doe" />
-                <Avatar src="https://i.pravatar.cc/300?u=12" alt="John Doe" />
+                <Avatar src="https://i.pravatar.cc/300?u=1" name="John Doe" />
+                <Avatar src="https://i.pravatar.cc/300?u=2" name="John Doe" />
+                <Avatar src="https://i.pravatar.cc/300?u=3" name="John Doe" />
+                <Avatar src="https://i.pravatar.cc/300?u=4" name="John Doe" />
+                <Avatar src="https://i.pravatar.cc/300?u=5" name="John Doe" />
+                <Avatar src="https://i.pravatar.cc/300?u=6" name="John Doe" />
+                <Avatar src="https://i.pravatar.cc/300?u=7" name="John Doe" />
+                <Avatar src="https://i.pravatar.cc/300?u=8" name="John Doe" />
+                <Avatar src="https://i.pravatar.cc/300?u=9" name="John Doe" />
+                <Avatar src="https://i.pravatar.cc/300?u=10" name="John Doe" />
+                <Avatar src="https://i.pravatar.cc/300?u=11" name="John Doe" />
+                <Avatar src="https://i.pravatar.cc/300?u=12" name="John Doe" />
               </AvatarGroup>
               <Text fontWeight="bold" align="center">
                 {talk.nbVotes} / 20 votes
@@ -176,13 +176,12 @@ const TalkDetails: NextPage = () => {
               <Button
                 colorScheme="primary"
                 leftIcon={<TriangleUpIcon />}
-                isFullWidth
               >
                 <span>Voter pour ce grepmeet</span>
               </Button>
 
               <Menu>
-                <MenuButton as={Button} colorScheme="gray" isFullWidth>
+                <MenuButton as={Button} colorScheme="gray">
                   Partager ce grepmeet
                 </MenuButton>
                 <MenuList>

@@ -6,12 +6,6 @@ import {
   Button,
   Stack,
   Link,
-  Text,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  PopoverHeader,
-  PopoverBody,
   Menu,
   MenuList,
   MenuButton,
@@ -50,12 +44,12 @@ const ScheduledTalkCard: FC<ScheduledTalkCardProps> = ({
   >
     <Stack spacing={4}>
       <Heading as="h4" size="sm" fontFamily="body" color="secondary.500">
-        {date && date.toLocaleDateString()}
+        {date && date.toLocaleDateString('fr-FR')}
       </Heading>
       <Heading as="h3" size="md" noOfLines={3} fontFamily="body">
-        <NextLink href={href} passHref>
-          <Link>{title}</Link>
-        </NextLink>
+        <Link as={NextLink} href={href}>
+          {title}
+        </Link>
       </Heading>
 
       {hashtags && (
@@ -70,11 +64,9 @@ const ScheduledTalkCard: FC<ScheduledTalkCardProps> = ({
     </Stack>
 
     <Stack alignSelf="flex-end" direction="row" spacing={2} alignItems="center">
-      <NextLink href={href} passHref>
-        <Button as="a" colorScheme="primary">
-          En savoir plus
-        </Button>
-      </NextLink>
+      <Button as={NextLink} href={href} colorScheme="primary">
+        En savoir plus
+      </Button>
 
       {isRegistered ? (
         <Menu>

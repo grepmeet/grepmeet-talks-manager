@@ -1,6 +1,6 @@
-import React, { FC } from "react";
-import speakingurl from "speakingurl";
-import NextLink from "next/link";
+import React, { FC } from 'react';
+import speakingurl from 'speakingurl';
+import NextLink from 'next/link';
 import {
   Button,
   Container,
@@ -8,11 +8,11 @@ import {
   Heading,
   SimpleGrid,
   Text,
-} from "@chakra-ui/react";
+} from '@chakra-ui/react';
 
-import { Talk } from "../types";
+import { Talk } from '../types';
 
-import ScheduledTalkCard from "../components/molecules/ScheduledTalkCard";
+import ScheduledTalkCard from '../components/molecules/ScheduledTalkCard';
 
 export type NextScheduledTalksProps = {
   scheduledTalks: Talk[];
@@ -24,7 +24,7 @@ const NextScheduledTalks: FC<NextScheduledTalksProps> = ({
   return (
     <Container as="section" py={{ base: 10, md: 20 }} maxW="5xl">
       <Heading mb="10">
-        Prochains{" "}
+        Prochains{' '}
         <Text as="span" color="secondary.500">
           grepmeets.
         </Text>
@@ -39,13 +39,13 @@ const NextScheduledTalks: FC<NextScheduledTalksProps> = ({
             author={
               speaker
                 ? {
-                    fullName: speaker.fullName,
-                    photoURL: speaker.photoURL,
-                    subtitle: speaker.subtitle,
-                    href: `#/speakers/${speaker.id}/${speakingurl(
-                      speaker.fullName
-                    )}`,
-                  }
+                  fullName: speaker.fullName,
+                  photoURL: speaker.photoURL,
+                  subtitle: speaker.subtitle,
+                  href: `#/speakers/${speaker.id}/${speakingurl(
+                    speaker.fullName
+                  )}`,
+                }
                 : null
             }
             date={date}
@@ -55,11 +55,9 @@ const NextScheduledTalks: FC<NextScheduledTalksProps> = ({
       </SimpleGrid>
 
       <Flex mt="10" justify="center">
-        <NextLink href="#/scheduledTalks" passHref>
-          <Button as="a" size="lg" colorScheme="secondary">
-            Voir les prochains grepmeets
-          </Button>
-        </NextLink>
+        <Button as={NextLink} href="#/scheduledTalks" size="lg" colorScheme="secondary">
+          Voir les prochains grepmeets
+        </Button>
       </Flex>
     </Container>
   );
