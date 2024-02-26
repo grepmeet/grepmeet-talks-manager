@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:13
+    container_name: grepmeet_postgres
+    volumes:
+      - db-postgres:/var/lib/postgresql/data:consistent
+    environment:
+      POSTGRES_USER: grepmeet
+      POSTGRES_PASSWORD: grepmeet
+      POSTGRES_DB: grepmeet
+    ports:
+      - '5432:5432'
+
+volumes:
+  db-postgres: {}

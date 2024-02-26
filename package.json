@@ -3,16 +3,20 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && prisma migrate deploy && prisma db seed && next build",
     "start": "next start",
     "lint": "next lint",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "migrate:dev": "prisma migrate dev",
+    "seed": "prisma db seed"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
+    "@prisma/client": "^5.10.2",
+    "babel-plugin-superjson-next": "^0.4.5",
     "framer-motion": "^11.0.6",
     "next": "14.1.0",
     "next-seo": "^6.5.0",
@@ -21,14 +25,16 @@
     "speakingurl": "^14.0.1"
   },
   "devDependencies": {
-    "@types/node": "^20",
+    "@types/node": "^20.11.20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/speakingurl": "^13.0.6",
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
     "git-cz": "4.8.0",
-    "typescript": "^5"
+    "prisma": "^5.10.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
   },
   "config": {
     "commitizen": {
@@ -37,5 +43,8 @@
   },
   "engines": {
     "node": "18"
+  },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   }
 }

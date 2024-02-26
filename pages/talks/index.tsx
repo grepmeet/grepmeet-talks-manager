@@ -1,152 +1,16 @@
 import React from 'react';
-import type { NextPage } from 'next';
+import type { InferGetStaticPropsType } from 'next';
 import speakingurl from 'speakingurl';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import { Wrap, Container, Heading, Text, ButtonGroup, Button, SimpleGrid } from '@chakra-ui/react';
 import { RepeatClockIcon, TriangleUpIcon } from '@chakra-ui/icons';
 
-import { Talk } from '../../types';
 
 import TalkCard from '../../components/molecules/TalkCard';
+import { PrismaClient } from '@prisma/client';
 
-// Mocks
-const talks: Talk[] = [
-  {
-    id: 'AZTDGHYETUYASLKQJQSHFG5672',
-    title: 'DNA DRIVE : Une nouvelle technologie de stockage ! 450 millions téraoctets par gramme d\'ADN.',
-    nbVotes: 45678989,
-    speaker: {
-      id: '56gh678lkjh',
-      fullName: 'John Doe',
-      subtitle: 'Lead Dev @ Microsoft',
-      photoURL: 'https://avatars0.githubusercontent.com/u/1164541?v=4',
-    },
-    tags: [
-      { id: '1', label: '#technology' },
-      { id: '2', label: '#stockage' },
-      { id: '3', label: '#dna' },
-    ],
-    language: 'fr',
-    date: null,
-  },
-  {
-    id: 'AZTDGHYETUYASLKQJQSHFG5672',
-    title: 'DNA DRIVE : Une nouvelle technologie !',
-    nbVotes: 12345,
-    speaker: {
-      id: '56gh678lkjh',
-      fullName: 'John Doe',
-      subtitle: 'Lead Dev @ Microsoft',
-      photoURL: 'https://avatars0.githubusercontent.com/u/1164541?v=4',
-    },
-    tags: [
-      { id: '1', label: '#technology' },
-    ],
-    language: 'fr',
-    date: null,
-  },
-  {
-    id: 'AZTDGHYETUYASLKQJQSHFG5672',
-    title: 'DNA DRIVE : Une nouvelle technologie !',
-    speaker: {
-      id: '56gh678lkjh',
-      fullName: 'John Doe',
-      subtitle: 'Lead Dev @ Microsoft',
-      photoURL: 'https://avatars0.githubusercontent.com/u/1164541?v=4',
-    },
-    nbVotes: 12345,
-    language: 'fr',
-    date: null,
-    tags: [],
-  },
-  {
-    id: 'AZTDGHYETUYASLKQJQSHFG5672',
-    title: 'DNA DRIVE : Une nouvelle technologie !',
-    speaker: {
-      id: '56gh678lkjh',
-      fullName: 'John Doe',
-      subtitle: 'Lead Dev @ Microsoft',
-      photoURL: 'https://avatars0.githubusercontent.com/u/1164541?v=4',
-    },
-    nbVotes: 12345,
-    language: 'fr',
-    date: null,
-    tags: [],
-  },
-  {
-    id: 'AZTDGHYETUYASLKQJQSHFG5672',
-    title: 'DNA DRIVE : Une nouvelle technologie !',
-    speaker: {
-      id: '56gh678lkjh',
-      fullName: 'John Doe',
-      subtitle: 'Lead Dev @ Microsoft',
-      photoURL: 'https://avatars0.githubusercontent.com/u/1164541?v=4',
-    },
-    nbVotes: 12345,
-    language: 'fr',
-    date: null,
-    tags: [],
-  },
-  {
-    id: 'AZTDGHYETUYASLKQJQSHFG5672',
-    title: 'DNA DRIVE : Une nouvelle technologie !',
-    speaker: {
-      id: '56gh678lkjh',
-      fullName: 'John Doe',
-      subtitle: 'Lead Dev @ Microsoft',
-      photoURL: 'https://avatars0.githubusercontent.com/u/1164541?v=4',
-    },
-    nbVotes: 12345,
-    language: 'fr',
-    date: null,
-    tags: [],
-  },
-  {
-    id: 'AZTDGHYETUYASLKQJQSHFG5672',
-    title: 'DNA DRIVE : Une nouvelle technologie !',
-    speaker: {
-      id: '56gh678lkjh',
-      fullName: 'John Doe',
-      subtitle: 'Lead Dev @ Microsoft',
-      photoURL: 'https://avatars0.githubusercontent.com/u/1164541?v=4',
-    },
-    nbVotes: 12345,
-    language: 'fr',
-    date: null,
-    tags: [],
-  },
-  {
-    id: 'AZTDGHYETUYASLKQJQSHFG5672',
-    title: 'DNA DRIVE : Une nouvelle technologie !',
-    speaker: {
-      id: '56gh678lkjh',
-      fullName: 'John Doe',
-      subtitle: 'Lead Dev @ Microsoft',
-      photoURL: 'https://avatars0.githubusercontent.com/u/1164541?v=4',
-    },
-    nbVotes: 12345,
-    language: 'fr',
-    date: null,
-    tags: [],
-  },
-  {
-    id: 'AZTDGHYETUYASLKQJQSHFG5672',
-    title: 'DNA DRIVE : Une nouvelle technologie !',
-    speaker: {
-      id: '56gh678lkjh',
-      fullName: 'John Doe',
-      subtitle: 'Lead Dev @ Microsoft',
-      photoURL: 'https://avatars0.githubusercontent.com/u/1164541?v=4',
-    },
-    nbVotes: 12345,
-    language: 'fr',
-    date: null,
-    tags: [],
-  },
-];
-
-const Talks: NextPage = () => {
+export default function TalksPage({ talks }: InferGetStaticPropsType<typeof getStaticProps>) {
   const { query: { section = 'trend' } } = useRouter();
 
   return (
@@ -165,17 +29,17 @@ const Talks: NextPage = () => {
         </Wrap>
 
         <SimpleGrid mt={5} columns={{ base: 1, md: 2 }} spacing="8">
-          {talks.map(({ id, title, speaker, nbVotes }, index) => (
+          {talks.map(({ id, title, speaker/*, nbVotes*/ }, index) => (
             <TalkCard
               key={`talk-${id}`}
               href={`/talks/${id}/${speakingurl(title)}`}
-              votes={nbVotes}
+              votes={/*nbVotes*/0}
               isVoted={index === 1}
               title={title}
               author={speaker ? {
                 fullName: speaker.fullName,
-                photoURL: speaker.photoURL,
-                subtitle: speaker.subtitle,
+                photoURL: speaker.photoUrl ?? '',
+                subtitle: speaker.bio ?? '',
                 href: `#/speakers/${speaker.id}/${speakingurl(speaker.fullName)}`
               } : null}
             />
@@ -186,4 +50,15 @@ const Talks: NextPage = () => {
   );
 };
 
-export default Talks;
+export async function getStaticProps() {
+  const prisma = new PrismaClient();
+  const talks = await prisma.talk.findMany({
+    include: {
+      speaker: true,
+    },
+  });
+
+  return {
+    props: { talks }
+  };
+}
