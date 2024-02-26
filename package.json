@@ -34,5 +34,8 @@
     "commitizen": {
       "path": "./node_modules/git-cz"
     }
+  },
+  "engines": {
+    "node": "18"
   }
 }
